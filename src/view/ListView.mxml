@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+  Created by liurui on 15/3/30.
+-->
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+        >
+    <!-- 通过指定itemRenderer 的方式更改list的构建元素-->
+    <s:List dataProvider="{list}" width="100%" height="100%"
+            itemRenderer="renderer.CheckListItemRenderer"/>
+    <fx:Script><![CDATA[
+        import mx.collections.ArrayCollection;
+
+        private var list:ArrayCollection = new ArrayCollection([
+            {label: '待办事项1', isComplete: false},
+            {label: '待办事项2', isComplete: false},
+            {label: '待办事项3', isComplete: true},
+            {label: '待办事项4', isComplete: false},
+            {label: '待办事项5', isComplete: false}
+        ]);
+        ]]></fx:Script>
+</s:View>
